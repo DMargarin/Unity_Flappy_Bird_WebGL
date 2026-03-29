@@ -4,5 +4,16 @@
       "source": "/",
       "destination": "/webgl-vk/index.html"
     }
+  ],
+  "headers": [
+    {
+      "source": "/webgl-vk/Build/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }
