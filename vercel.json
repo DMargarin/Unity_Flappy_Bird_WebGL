@@ -1,5 +1,23 @@
 {
   "rewrites": [
+<<<<<<< HEAD
     { "source": "/(.*)", "destination": "/webgl-vk/index.html" }
+=======
+    {
+      "source": "/(.*)",
+      "destination": "/webgl-vk/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/webgl-vk/(.*\\.(wasm|unityweb|data|js))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+>>>>>>> 02e604e (Fix vercel.json for webgl-vk subdirectory)
   ]
 }
