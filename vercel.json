@@ -1,8 +1,5 @@
 {
   "rewrites": [
-<<<<<<< HEAD
-    { "source": "/(.*)", "destination": "/webgl-vk/index.html" }
-=======
     {
       "source": "/(.*)",
       "destination": "/webgl-vk/index.html"
@@ -18,6 +15,5 @@
         }
       ]
     }
->>>>>>> 02e604e (Fix vercel.json for webgl-vk subdirectory)
   ]
 }
