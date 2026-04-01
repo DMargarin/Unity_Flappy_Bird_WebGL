@@ -68,9 +68,14 @@
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
+  canvas.style.width = "960px";
+  canvas.style.height = "600px";
+  canvas.style.margin = "auto";
+  container.style.display = "flex";
+  container.style.justifyContent = "center";
+  container.style.alignItems = "center";
+  container.style.height = "100vh";
+}
 
       loadingBar.style.display = "block";
 
