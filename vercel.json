@@ -1,28 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/webgl-vk/(?!Build/|TemplateData/)(.*)",
       "destination": "/webgl-vk/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/webgl-vk/Build/(.*)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/javascript"
-        }
-      ]
-    },
-    {
-      "source": "/webgl-vk/(.*\\.(wasm|unityweb|data))",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/octet-stream"
-        }
-      ]
     }
   ]
 }
