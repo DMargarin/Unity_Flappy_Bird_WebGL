@@ -1,18 +1,8 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
   "headers": [
     {
-      "source": "/Build/(.*)",
+      "source": "/(.*)",
       "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/javascript"
-        },
         {
           "key": "X-Frame-Options",
           "value": "ALLOWALL"
