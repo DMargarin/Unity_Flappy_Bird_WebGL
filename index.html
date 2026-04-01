@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Flappy_Challendge_Road_To_100</title>
     <link rel="shortcut icon" href="/webgl-vk/TemplateData/favicon.ico">
     <link rel="stylesheet" href="/webgl-vk/TemplateData/style.css">
-	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+	
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -24,6 +25,13 @@
         <div id="unity-build-title">Flappy_Challendge_Road_To_100</div>
       </div>
     </div>
+<script>
+  // Инициализация VK Bridge
+  window.vkBridge = vkBridge;
+  vkBridge.send('VKWebAppInit')
+    .then(() => console.log("VK Bridge initialized"))
+    .catch(error => console.error("VK Bridge init error:", error));
+</script>
        <script>
   var buildUrl = "Build/";
   var loaderUrl = buildUrl + "b23dd96997961653e2825455633aac82.loader.js";
@@ -93,12 +101,6 @@
       };
       document.body.appendChild(script);
     </script>
-	<script>
-  // Инициализация VK Bridge
-  window.vkBridge = vkBridge;
-  vkBridge.send('VKWebAppInit')
-    .then(() => console.log("VK Bridge initialized"))
-    .catch(error => console.error("VK Bridge init error:", error));
-</script>
+	
   </body>
 </html>
