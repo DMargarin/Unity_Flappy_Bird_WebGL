@@ -93,6 +93,8 @@
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
            unityInstance.SetFullscreen(0);
+           canvas.style.width = "100%";
+           canvas.style.height = "100%";
            unityInstance.SendMessage("Canvas", "SetResolution", "960x600"); // принудительно задаёт размер
 
           fullscreenButton.onclick = () => {
