@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <link rel="shortcut icon" href="/TemplateData/favicon.ico">
     <link rel="stylesheet" href="/TemplateData/style.css">
-	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -71,10 +71,11 @@
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
 } else {
-  canvas.style.width = "960px";
-  canvas.style.height = "600px";
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+  canvas.style.maxWidth = "960px";
+  canvas.style.maxHeight = "600px";
   canvas.style.margin = "0 auto";
-  container.style.textAlign = "center";
 }
 
       loadingBar.style.display = "block";
